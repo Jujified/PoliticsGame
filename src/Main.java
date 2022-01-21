@@ -8,6 +8,45 @@ import java.awt.event.MouseListener;
 class MainMenu {
 
     public String name = "Political Game";
+    public int rtrn = 0;
+
+    //must a a way to return action lister
+
+//    int Button(int x, int y, String text){
+//
+//        JButton btn = new JButton(text);
+//        btn.setBounds(x, y, 365,75);
+//        btn.setLocation(x,y);
+//        btn.setBorder(BorderFactory.createLineBorder(Color.red,3));
+//        btn.addMouseListener(new MouseListener() {
+//            @Override
+//            public void mouseClicked(MouseEvent e) {
+//                rtrn = 1;
+//            }
+//
+//            @Override
+//            public void mousePressed(MouseEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void mouseReleased(MouseEvent e) {
+//
+//            }
+//
+//            @Override
+//            public void mouseEntered(MouseEvent e) {
+//                btn.setBorder(BorderFactory.createLineBorder(Color.cyan,3));
+//            }
+//
+//            @Override
+//            public void mouseExited(MouseEvent e) {
+//                btn.setBorder(BorderFactory.createLineBorder(Color.red,3));
+//            }
+//        });
+//
+//            return rtrn;
+//    }
 
     MainMenu(){
         JFrame frame = new JFrame(name);
@@ -26,13 +65,14 @@ class MainMenu {
         title2.setFont(new Font("Calibri", Font.BOLD, 25));
         frame.add(title2);
 
-        JButton ElectPOTUS = new JButton("Run For POTUS");
+        JButton ElectPOTUS = new JButton("Run For Senate");
         ElectPOTUS.setBounds(100, 50, 365,75);
         ElectPOTUS.setLocation(200,100);
         ElectPOTUS.setBorder(BorderFactory.createLineBorder(Color.red,2));
         ElectPOTUS.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 //continue to game
+                System.out.println("button pressed");
             }
         });
         ElectPOTUS.addMouseListener(new MouseListener() {
@@ -61,9 +101,8 @@ class MainMenu {
                 ElectPOTUS.setBorder(BorderFactory.createLineBorder(Color.red,2));
             }
         });
+
         frame.add(ElectPOTUS);
-
-
         //Dimension minSize = new Dimension(1100,600);
         //frame.setMinimumSize(minSize);
         frame.setLayout(null);
